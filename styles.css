@@ -50,3 +50,23 @@ footer {
     font-size: 0.9rem;
     color: #000000;
 }
+/* Botón */
+.button-container {
+    text-align: center; /* Centra el botón */
+    margin-top: 20px;
+}
+
+button {
+    background-color: #007BFF; /* Azul vibrante */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+}
