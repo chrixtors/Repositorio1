@@ -1,12 +1,99 @@
-<section class="descripcion">
-    <h2>Sobre mí</h2>
-    <p>
-        ¡Hola! Soy Christopher, tengo 20 años y soy una persona apasionada por la tecnología, los deportes y el desarrollo personal. 
-        Disfruto jugando videojuegos, practicando basket y dedicando tiempo al gimnasio para mantenerme en forma. 
-        Me gusta aprender cosas nuevas y siempre estoy buscando formas de mejorar y disfrutar de la vida.
-    </p>
-    <p>
-        Si compartes algunos de mis intereses o simplemente quieres conocerme más, ¡bienvenido a mi página!
-    </p>
-</section>
-<link rel="stylesheet" href="stuylos.css">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stuylos.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <section class="descripcion">
+                    <h2 class="card-title">Sobre mí</h2>
+                    <div class="text-center mb-4">
+                        <img src="mifoto.jpg" class="rounded-circle" alt="Foto de Christopher" style="width: 150px; height: 150px;">
+                    </div>
+                    <p class="card-text Text">
+                        ¡Hola! Soy Christopher, tengo 20 años y soy una persona apasionada por la tecnología, los deportes y el desarrollo personal.
+                        Disfruto jugando videojuegos, practicando basket y dedicando tiempo al gimnasio para mantenerme en forma.
+                        Me gusta aprender cosas nuevas y siempre estoy buscando formas de mejorar y disfrutar de la vida.
+                        <br><br>
+                        Si compartes algunos de mis intereses o simplemente quieres conocerme más, ¡bienvenido a mi página!
+                    </p>
+                    
+                    <div class="mt-3">
+                        <button class="btn btn-primary" onclick="showMessage()">Aceptar</button>
+                        <button class="btn btn-secondary">Cancelar</button>
+                        <button class="btn btn-secondary" onclick="cambiarcontenido()">Cambiar información</button>
+                    </div> 
+                </section>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4" id="color1">
+                <p>Div de prueba 1</p>
+            </div>
+            <div class="col-md-4" id="color2">
+                <p>Div de prueba 2</p>
+            </div>
+        </div>
+        <button class="btn btn-success" onclick="cambiarcolor('color1','green')">Cambiar Color 1</button>
+        <button class="btn btn-danger"  onclick="cambiarcolor('color2','red')">Cambiar Color 2</button>
+        <div class="card mt-4"> 
+            <div class="card-body">
+                <h3 class="card-title">Mis Hobbies</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Tecnología</li>
+                    <li class="list-group-item">Videojuegos</li>
+                    <li class="list-group-item">Basket</li>
+                    <li class="list-group-item">Gimnasio</li>
+                    <li class="list-group-item">Leer libros de desarrollo personal</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-body">
+                <h3 class="card-title">Galería</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/150" class="img-fluid rounded mb-3" alt="Imagen 1">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/150" class="img-fluid rounded mb-3" alt="Imagen 2">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/150" class="img-fluid rounded mb-3" alt="Imagen 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace a jQuery, Popper.js y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showMessage(){
+            alert("Haz presionado el botón aceptar");
+        }
+        function cambiarcontenido(){    
+            const texto = document.querySelector('.Text');
+            texto.textContent = "Este es el nuevo contenido después de cambiar la información.";
+        }
+        function cambiarcolor(idElemento,color, idOtroelemento){
+            const d = document.getElementById(idElemento);
+            d.style.backgroundColor = color;
+            const d2 = document.getElementById(idOtroelemento);
+            d2.style.backgroundColor = 'white';
+            
+        }
+    </script>
+</body>
+</html>

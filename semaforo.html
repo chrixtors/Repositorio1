@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Presentación</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .semaforo {
+            width: 100px;
+            background-color: black;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 300px;
+            margin: 20px auto;
+        }
+        .luz {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .controls {
+            text-align: center;
+        }
+        .controls button {
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .controls button#btnRojo {
+            background-color: red;
+        }
+        .controls button#btnAmarillo {
+            background-color: yellow;
+            color: black; /* Para mejor contraste */
+        }
+        .controls button#btnVerde {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Semáforo</h1>
+        </header>
+
+        <div class="semaforo">
+            <div id="rojo" class="luz"></div>
+            <div id="amarillo" class="luz"></div>
+            <div id="verde" class="luz"></div>
+        </div>
+
+        <div class="controls">
+            <button id="btnRojo" onclick="cambiarColor('rojo', 'red', ['amarillo', 'verde'])">Rojo</button>
+            <button id="btnAmarillo" onclick="cambiarColor('amarillo', 'yellow', ['rojo', 'verde'])">Amarillo</button>
+            <button id="btnVerde" onclick="cambiarColor('verde', 'green', ['rojo', 'amarillo'])">Verde</button>
+        </div>
+
+        <footer>
+            <p>Gracias</p>
+        </footer>
+    </div>
+
+    <script>
+        function cambiarColor(idElemento, color, otrosElementos) {
+            const d = document.getElementById(idElemento);
+            d.style.backgroundColor = color;
+            otrosElementos.forEach(id => {
+                document.getElementById(id).style.backgroundColor = 'white';
+            });
+        }
+    </script>
+</body>
+</html>
