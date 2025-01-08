@@ -88,7 +88,7 @@
         footer {
             text-align: center;
             padding: 20px;
-            background: #f4f4f9;
+            background:white;
             font-size: 14px;
             color: #555;
         }
@@ -138,7 +138,23 @@
         <div class="button-container">
             <button onclick="irANuevaPagina()">Ir a la nueva página</button>
             <button onclick="irASemaforo()">Ir a la página del semáforo</button>
+            <button onclick="irAPaginaVideo()">Ir a la página de video</button>
         </div>
+        
+        <script>
+            function irANuevaPagina() {
+                window.location.href = 'pagina.html'; // Redirige al archivo pagina.html
+            }
+        
+            function irASemaforo() {
+                window.location.href = 'semaforo.html'; // Redirige al archivo semaforo.html
+            }
+        
+            function irAPaginaVideo() {
+                window.location.href = 'video.html'; // Redirige al archivo video.html
+            }
+        </script>
+        
         
         <footer>
             <p>Gracias por visitar mi página</p>
@@ -154,6 +170,10 @@
         function irASemaforo() {
             window.location.href = 'semaforo.html'; // Redirige al archivo semaforo.html
         }
+        function irAPaginaVideo() {
+    window.location.href = 'video.html';
+}
+
     </script>
 </body>
 </html>

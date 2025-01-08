@@ -1,0 +1,114 @@
+/* Estilo global */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: linear-gradient(145deg, #1a1a2e, #16213e);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    padding: 30px;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(to right, #f7b42c, #fc575e);
+    color: #ffffff;
+    border-radius: 15px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+/* Contenido */
+.content {
+    padding: 20px;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    color: #dcdcdc;
+}
+
+.content ol {
+    padding-left: 30px;
+    margin: 20px 0;
+}
+
+.content ol li {
+    margin-bottom: 15px;
+    color: #f7b42c;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 25px;
+}
+
+.content ol li::before {
+    content: "⭐";
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    color: #fc575e;
+}
+
+/* Contenedor de video y audio */
+.video-container, .audio-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+video, audio {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+video:hover, audio:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+}
+
+.video-container h2, .audio-container h2 {
+    font-size: 2rem;
+    color: #f7b42c;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #16213e, #1a1a2e);
+    font-size: 1rem;
+    color: #f7b42c;
+    margin-top: 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+footer p {
+    margin: 5px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+footer p:first-child {
+    font-weight: bold;
+    color: #ffffff;
+}
